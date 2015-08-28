@@ -1,4 +1,4 @@
-`jare/go-tools:latest`   [![jare/vim-bundle:no-ycm](https://badge.imagelayers.io/jare/vim-bundle:no-ycm.svg)](https://imagelayers.io/?images=jare/vim-bundle:no-ycm 'Get your own badge on imagelayers.io')  
+`jare/go-tools:latest`   [![jare/go-tools:latest](https://badge.imagelayers.io/jare/go-tools:latest.svg)](https://imagelayers.io/?images=jare/go-tools:latest 'jare/go-tools:latest')  
 
 #### **Go tools:**  
   1. go     
