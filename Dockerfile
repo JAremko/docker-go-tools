@@ -6,6 +6,7 @@ VOLUME /goroot
 
 ENV GOPATH /home/developer/workspace
 ENV GOROOT /goroot
+ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 ADD run /usr/local/bin/
 
