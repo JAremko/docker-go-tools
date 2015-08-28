@@ -4,6 +4,9 @@ MAINTAINER JAremko <w3techplaygound@gmail.com>
 
 VOLUME /goroot
 
+ENV GOPATH /home/developer/workspace
+ENV GOROOT /goroot
+
 ADD run /usr/local/bin/
 
 RUN apk --update add go git mercurial                          && \
