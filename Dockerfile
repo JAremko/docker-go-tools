@@ -12,6 +12,8 @@ ADD run /usr/local/bin/
 
 RUN apk --update add go git mercurial                          && \
     rm -rf /var/chache/apk/*                                   && \
+    export GOPATH=/home/developer/workspace                    && \
+    export GOROOT=/goroot                                      && \
     mkdir -p $GOROOT/bin /home/developer/workspace             && \
     mv -f /usr/bin/go $GOROOT/bin/go                           && \
     mv -f /usr/bin/gofmt $GOROOT/bin/gofmt                     && \
@@ -39,6 +41,8 @@ RUN apk --update add go git mercurial                          && \
     mv -f /home/developer/workspace/bin/* $GOROOT/bin/         && \
     rm -rf /home/developer/workspace                           && \
     apk --update del go git mercurial                          && \
-    tar -zcf /home/developer/goroot.tar.gz /goroot  
-
+    sh /util/ocd-clean $GOROOT/                                && \
+    tar -zcf /home/developer/goroot.tar.gz  $GOROOT            && \
+    rm -rf  $GOROOT/*                                          
+    
 ENTRYPOINT ["sh", "/usr/local/bin/run"]
