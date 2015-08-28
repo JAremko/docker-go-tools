@@ -39,7 +39,7 @@ RUN apk --update add go git mercurial                          && \
     go get -u github.com/golang/lint/golint                    && \
     go get -u github.com/jstemmer/gotags                       && \
     mv -f /home/developer/workspace/bin/* $GOROOT/bin/         && \
-    rm -rf /home/developer/workspace                           && \
+    rm -rf /home/developer/workspace/*                         && \
     apk --update del go git mercurial                          && \
     sh /util/ocd-clean $GOROOT/                                && \
     tar -zcf /home/developer/goroot.tar.gz  $GOROOT            && \
