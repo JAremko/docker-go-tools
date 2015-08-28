@@ -1,7 +1,7 @@
 `jare/go-tools:latest`   [![jare/go-tools:latest](https://badge.imagelayers.io/jare/go-tools:latest.svg)](https://imagelayers.io/?images=jare/go-tools:latest 'jare/go-tools:latest')  
 
 #### **Go tools:**  
-  1. go(binaries)     
+  1. go    
   2. [gofmt](https://golang.org/cmd/gofmt/)  
   3. [benchcmp](https://golang.org/x/tools/cmd/benchcmp)   
   4. [callgraph](https://golang.org/x/tools/cmd/callgraph)   
