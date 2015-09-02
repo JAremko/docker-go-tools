@@ -2,6 +2,9 @@ FROM jare/alpine:latest
 
 MAINTAINER JAremko <w3techplaygound@gmail.com>
 
+#useful for aliasing
+LABEL jare-go-tools-docker-volume="true"
+
 VOLUME /goroot
 
 ENV GOPATH /home/developer/workspace
