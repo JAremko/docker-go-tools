@@ -24,7 +24,7 @@
   21. [gotags](https://github.com/jstemmer/gotags)
 
 #### **Use cases:**
-  - **If you want to run a tool. For example gofmt.**
+  - **If you want to run a tool. For example gofmt:**
     1. Make an alias:  
      `alias gofmt="docker run --rm -v $(pwd):/home/developer/workspace jare/go-tools gofmt"`
     2. Have fun!  `gofmt hello.go`
