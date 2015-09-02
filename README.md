@@ -23,7 +23,7 @@
   20. [golint](https://github.com/golang/lint/golint)
   21. [gotags](https://github.com/jstemmer/gotags)
 
-#### **Use cases:**
+#### **Use cases:**  
 
 **If you want to run a tool. For example gofmt.**
    1.Make an alias:  
