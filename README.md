@@ -30,4 +30,4 @@
     2. Have fun!  `gofmt hello.go`
   - **Also you can use this image as a docker volume. [See         `jare/vim-bundle`](https://registry.hub.docker.com/u/jare/vim-bundle/)**
 
-*Keep in mind that this image populates the `/goroot` volume if it's empty. You can keep one container running to prevent docker from flushing the `/goroot` volume.*
+*This image populates the `/goroot` volume if it's empty. You can keep one container running to prevent docker from flushing the `/goroot` volume.*
