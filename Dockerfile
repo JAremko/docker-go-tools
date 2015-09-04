@@ -2,7 +2,7 @@ FROM jare/alpine:latest
 
 MAINTAINER JAremko <w3techplaygound@gmail.com>
 
-#useful for aliasing
+#used to find a fitting container in bash aliases
 LABEL jare-go-tools-docker-volume="true"
 
 VOLUME /goroot
