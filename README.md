@@ -28,6 +28,6 @@
     - Make an alias:  
      `alias gofmt="docker run --rm -v $(pwd):/home/developer/workspace jare/go-tools gofmt"`
     - Have fun!  `gofmt hello.go`
-  - **Also you can use this image as a docker volume. For example [`jare/vim-bundle`](https://registry.hub.docker.com/u/jare/vim-bundle/)**
+  - **Also you can use this image as a docker volume. [For example `jare/vim-bundle`](https://registry.hub.docker.com/u/jare/vim-bundle/)**
 
 *This image populates the `/goroot` volume if it's empty. You can keep one container(Not necessary running) to prevent Docker from flushing the `/goroot` volume.*
