@@ -3,7 +3,7 @@ FROM jare/alpine:latest
 MAINTAINER JAremko <w3techplaygound@gmail.com>
 
 #used to find a fitting container in bash aliases
-LABEL jare-go-tools-docker-volume
+LABEL jare-go-tools-docker-volume="true"
 
 VOLUME /goroot
 
