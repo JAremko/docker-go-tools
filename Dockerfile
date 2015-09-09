@@ -45,6 +45,6 @@ RUN apk --update add go git mercurial                          && \
     apk --update del go git mercurial                          && \
     sh /util/ocd-clean $GOROOT/                                && \
     tar -zcf /home/developer/goroot.tar.gz  $GOROOT            && \
-    rm -rf  $GOROOT/*                                          
+    rm -rf  $GOROOT/                                          
     
 ENTRYPOINT ["sh", "/usr/local/bin/run"]
