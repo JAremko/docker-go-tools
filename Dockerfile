@@ -41,9 +41,10 @@ RUN apk --update add go git mercurial                          && \
     go get -u code.google.com/p/rog-go/exp/cmd/godef           && \
     go get -u github.com/golang/lint/golint                    && \
     go get -u github.com/jstemmer/gotags                       && \
-    mv -f /home/developer/workspace/* $GOROOT/                 && \
+    mv -rf /home/developer/workspace/* $GOROOT/                && \
     apk --update del go git mercurial                          && \
     sh /util/ocd-clean $GOROOT/                                && \
-    tar -zcf /home/developer/goroot.tar.gz  $GOROOT           
+    tar -zcf /home/developer/goroot.tar.gz  $GOROOT            && \
+    rm -rf $GOROOT/*
     
 ENTRYPOINT ["sh", "/usr/local/bin/run"]
