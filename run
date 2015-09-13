@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ "$(ls -A /go 2> /dev/null)" == "" ]; then
-  tar -xzf /home/developer/goroot.tar.gz -C /
-  rm /home/developer/goroot.tar.gz
-fi
-cd /home/developer/workspace
-$@
