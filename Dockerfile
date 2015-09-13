@@ -5,14 +5,10 @@ MAINTAINER JAremko <w3techplaygound@gmail.com>
 #used to find a fitting container in bash aliases
 LABEL jare-go-tools-docker-volume="true"
 
-VOLUME /goroot
-
 ENV GOPATH /home/developer/workspace
 ENV GOROOT /goroot
 ENV GOBIN /goroot/bin
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
-
-ADD run /usr/local/bin/
 
 RUN apk --update add go git mercurial                          && \
     rm -rf /var/chache/apk/*                                   && \
@@ -45,7 +41,4 @@ RUN apk --update add go git mercurial                          && \
     cp -rf /home/developer/workspace/* $GOROOT/                && \
     apk --update del go git mercurial                          && \
     sh /util/ocd-clean $GOROOT/                                && \
-    tar -zcf /home/developer/goroot.tar.gz  $GOROOT            && \
-    rm -rf $GOROOT/* /home/developer/workspace/*
-    
-ENTRYPOINT ["sh", "/usr/local/bin/run"]
+    rm -rf /home/developer/workspace/*
