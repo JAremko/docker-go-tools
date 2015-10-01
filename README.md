@@ -22,6 +22,7 @@
   19. [errcheck](https://github.com/kisielk/errcheck)
   20. [golint](https://github.com/golang/lint/golint)
   21. [gotags](https://github.com/jstemmer/gotags)
+  22. [godep](https://github.com/tools/godep)
 
 #### **Use cases:**
   - **If you want to run a tool. For example gofmt:**
