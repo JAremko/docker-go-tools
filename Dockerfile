@@ -2,23 +2,15 @@ FROM jare/alpine:latest
 
 MAINTAINER JAremko <w3techplaygound@gmail.com>
 
-#used to find a fitting container in bash aliases
-LABEL jare-go-tools-docker-volume="true"
-
 ENV GOPATH /home/developer/workspace
-ENV GOROOT /goroot
-ENV GOBIN /goroot/bin
+ENV GOROOT /usr/lib/go
+ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 RUN apk --update add git mercurial                                                                                   && \
     apk add go godep --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community --allow-untrusted && \
     rm -rf /var/chache/apk/*                                                                                         && \
-    export GOPATH=/home/developer/workspace                                                                          && \
-    export GOROOT=/goroot                                                                                            && \
-    mkdir -p $GOROOT/bin /home/developer/workspace                                                                   && \
-    mv -f /usr/bin/go $GOROOT/bin/go                                                                                 && \
-    mv -f /usr/bin/gofmt $GOROOT/bin/gofmt                                                                           && \
-    mv -f /usr/lib/go/* $GOROOT/                                                                                     && \
+    mkdir -p /home/developer/workspace                                                                               && \
     go get -u golang.org/x/tools/cmd/benchcmp                                                                        && \
     go get -u golang.org/x/tools/cmd/callgraph                                                                       && \
     go get -u golang.org/x/tools/cmd/digraph                                                                         && \
@@ -39,7 +31,7 @@ RUN apk --update add git mercurial                                              
     go get -u code.google.com/p/rog-go/exp/cmd/godef                                                                 && \
     go get -u github.com/golang/lint/golint                                                                          && \
     go get -u github.com/jstemmer/gotags                                                                             && \
-    cp -rf /home/developer/workspace/* $GOROOT/                                                                      && \
-    apk --update del go git mercurial                                                                                && \
+    cp -rf /home/developer/workspace/bin/* $GOBIN/                                                                   && \
+    apk --update del git mercurial                                                                                   && \
     sh /util/ocd-clean $GOROOT/                                                                                      && \
     rm -rf /home/developer/workspace/*
