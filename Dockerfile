@@ -10,7 +10,7 @@ ENV PATH $PATH:$GOBIN:$GOPATH/bin
 RUN apk --update add git mercurial                                                                                   && \
     mkdir -p /home/developer/workspace                                                                               && \ 
     apk add go godep --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community --allow-untrusted && \
-    rm -rf /var/chache/apk/*                                                                                                                                                                 && \
+    rm -rf /var/chache/apk/*                                                                                
 RUN go get -u golang.org/x/tools/cmd/benchcmp                                                                        && \
     go get -u golang.org/x/tools/cmd/callgraph                                                                       && \
     go get -u golang.org/x/tools/cmd/digraph                                                                         && \
