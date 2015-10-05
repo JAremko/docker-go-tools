@@ -25,7 +25,6 @@ RUN apk --update add git mercurial                                              
     go get -u golang.org/x/tools/cmd/oracle                                                                          && \
     go get -u golang.org/x/tools/cmd/ssadump                                                                         && \
     go get -u golang.org/x/tools/cmd/stringer                                                                        && \
-    go get -u golang.org/x/tools/cmd/tipgodoc                                                                        && \
     go get -u golang.org/x/tools/cmd/vet                                                                             && \
     go get -u golang.org/x/tools/cmd/vet/whitelist                                                                   && \
     go get -u code.google.com/p/rog-go/exp/cmd/godef                                                                 && \
