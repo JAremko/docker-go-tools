@@ -16,13 +16,12 @@
   13. [oracle](https://golang.org/x/tools/cmd/oracle)   
   14. [ssadump](https://golang.org/x/tools/cmd/ssadump)   
   15. [stringer](https://golang.org/x/tools/cmd/stringer)   
-  16. [tipgodoc](https://golang.org/x/tools/cmd/tipgodoc)   
-  17. [vet](https://golang.org/x/tools/cmd/vet)
-  18. [godef](https://code.google.com/p/rog-go/exp/cmd/godef)
-  19. [errcheck](https://github.com/kisielk/errcheck)
-  20. [golint](https://github.com/golang/lint/golint)
-  21. [gotags](https://github.com/jstemmer/gotags)
-  22. [godep](https://github.com/tools/godep)
+  16. [vet](https://golang.org/x/tools/cmd/vet)
+  17. [godef](https://code.google.com/p/rog-go/exp/cmd/godef)
+  18. [errcheck](https://github.com/kisielk/errcheck)
+  19. [golint](https://github.com/golang/lint/golint)
+  20. [gotags](https://github.com/jstemmer/gotags)
+  21. [godep](https://github.com/tools/godep)
 
 #### **Use cases:**
   - **If you want to run a tool. For example gofmt:**
