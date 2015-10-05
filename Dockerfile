@@ -29,8 +29,7 @@ RUN apk --update add git mercurial                                              
     go get -u golang.org/x/tools/cmd/vet/whitelist                                                                   && \
     go get -u code.google.com/p/rog-go/exp/cmd/godef                                                                 && \
     go get -u github.com/golang/lint/golint                                                                          && \
-    go get -u github.com/jstemmer/gotags                                                                             && \     
-    cp -rf /home/developer/workspace/bin/* $GOBIN/                                                                   && \
+    go get -u github.com/jstemmer/gotags                                                                             && \
     apk --update del git mercurial                                                                                   && \
     sh /util/ocd-clean $GOROOT/                                                                                      && \
     rm -rf /home/developer/workspace/*
