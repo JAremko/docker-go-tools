@@ -23,7 +23,7 @@
   20. [gotags](https://github.com/jstemmer/gotags)
   21. [godep](https://github.com/tools/godep)
 
-#### **Use cases:**
+#### **How to use:**
   - **If you want to run a tool. For example gofmt:**
     - Make an alias:  
      `alias gofmt="docker run --rm -v $(pwd):/home/developer/workspace jare/go-tools gofmt"`
