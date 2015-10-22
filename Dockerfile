@@ -31,6 +31,6 @@ RUN apk --update add git mercurial                                              
     go get -u github.com/golang/lint/golint                                                                          && \
     go get -u github.com/jstemmer/gotags                                                                             && \
     mv /usr/bin/godep $GOBIN                                                                                         && \
-    apk del git mercurial godep                                                                                      && \
+    apk del git mercurial                                                                                            && \
     sh /util/ocd-clean $GOROOT/                                                                                      && \
     rm -rf /home/developer/workspace/*
