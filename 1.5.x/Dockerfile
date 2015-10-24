@@ -8,7 +8,7 @@ ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
 RUN apk --update add git mercurial                      && \
-RUN apk --update add git mercurial go godep                \
+    apk --update add git mercurial go godep                \
       --update-cache --repository                          \
       http://dl-3.alpinelinux.org/alpine/edge/community    \
       --allow-untrusted                                 && \
