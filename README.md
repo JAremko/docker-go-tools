@@ -1,6 +1,6 @@
 #### **tags:**
-  - `:latest`  - go 1.5.x
-  - `:1.4`     - go 1.4.x
+  - `jare/go-tools:latest`  - go 1.5.x
+  - `jare/go-tools:1.4`     - go 1.4.x
   
 #### **Go tools:**  
   1. go    
