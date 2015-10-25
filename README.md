@@ -1,3 +1,7 @@
+#### **tags:**
+  - `:latest`  - go 1.5.x
+  - `:1.4`     - go 1.4.x
+  
 #### **Go tools:**  
   1. go    
   2. [gofmt](https://golang.org/cmd/gofmt/)  
