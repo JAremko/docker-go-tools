@@ -34,4 +34,5 @@ RUN apk --update add git mercurial                      && \
     go get -u github.com/jstemmer/gotags                && \
     mv /usr/bin/godep $GOBIN/                           && \
     apk del git mercurial                               && \
+    find / -name ".git" -prune -exec rm -rf "{}" \;     && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
