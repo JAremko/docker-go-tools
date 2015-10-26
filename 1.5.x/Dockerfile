@@ -12,8 +12,7 @@ RUN apk --update add git mercurial                      && \
       --update-cache --repository                          \
       http://dl-3.alpinelinux.org/alpine/edge/community    \
       --allow-untrusted                                 && \
-    mkdir -p /home/developer/workspace                  && \ 
-    rm -rf /var/chache/apk/*                            && \
+    mkdir -p /home/developer/workspace                  && \
     go get -u golang.org/x/tools/cmd/benchcmp           && \
     go get -u golang.org/x/tools/cmd/callgraph          && \
     go get -u golang.org/x/tools/cmd/digraph            && \
