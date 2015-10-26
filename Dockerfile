@@ -32,4 +32,5 @@ RUN apk --update add git mercurial go godep          && \
     mv /usr/bin/go $GOBIN/                           && \
     mv /usr/bin/gofmt $GOBIN/                        && \
     apk del git mercurial                            && \
+    find / -name ".git" -prune -exec rm -rf "{}" \;  && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
