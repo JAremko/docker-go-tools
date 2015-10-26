@@ -8,8 +8,7 @@ ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
 RUN apk --update add git mercurial go godep          && \
-    mkdir -p /home/developer/workspace               && \ 
-    rm -rf /var/chache/apk/*                         && \
+    mkdir -p /home/developer/workspace               && \
     go get -u golang.org/x/tools/cmd/benchcmp        && \
     go get -u golang.org/x/tools/cmd/callgraph       && \
     go get -u golang.org/x/tools/cmd/digraph         && \
