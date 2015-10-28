@@ -16,6 +16,7 @@ RUN apk --update add git mercurial go godep          && \
     go get -u golang.org/x/tools/cmd/fiximports      && \
     go get -u golang.org/x/tools/cmd/godex           && \
     go get -u golang.org/x/tools/cmd/godoc           && \
+    go get -u github.com/nsf/gocode                  && \
     go get -u golang.org/x/tools/cmd/gomvpkg         && \
     go get -u golang.org/x/tools/cmd/gorename        && \
     go get -u golang.org/x/tools/cmd/html2article    && \
