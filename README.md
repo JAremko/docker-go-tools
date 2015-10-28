@@ -24,6 +24,7 @@
   19. [golint](https://github.com/golang/lint/golint)
   20. [gotags](https://github.com/jstemmer/gotags)
   21. [godep](https://github.com/tools/godep)
+  22. [gocode](https://github.com/nsf/gocode)
 
 #### **How to use:**
   - **If you want to run a tool. For example gofmt:**
