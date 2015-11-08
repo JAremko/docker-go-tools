@@ -2,7 +2,7 @@
   - `jare/go-tools:latest`  - go 1.5.x
   - `jare/go-tools:1.4`     - go 1.4.x
   
-#### **Go tools:**  
+#### **Tools:**  
   1. go    
   2. [gofmt](https://golang.org/cmd/gofmt/)  
   3. [benchcmp](https://golang.org/x/tools/cmd/benchcmp)   
