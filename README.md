@@ -32,7 +32,8 @@
   27. [godo](https://github.com/go-godo/godo) 
   28. [gocode](https://github.com/nsf/gocode) 
   29. [errcheck](https://github.com/kisielk/errcheck) 
-  30. [golint](https://github.com/golang/lint/golint) 
+  30. [golint](https://github.com/golang/lint/golint)   
+  
 #### **How to use:**
   - **If you want to run a tool. For example gofmt:**
     - Make an alias:  
