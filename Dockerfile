@@ -38,7 +38,7 @@ RUN apk --update add git mercurial go godep                         && \
       github.com/nsf/gocode                                            \
       github.com/kisielk/errcheck                                      \
       github.com/golang/lint/golint                                    \
-      github.com/jstemmer/gotags                                       \
+      github.com/jstemmer/gotags                                    && \
     mv /usr/bin/godep $GOBIN/                                       && \
     mv /usr/bin/go $GOBIN/                                          && \
     mv /usr/bin/gofmt $GOBIN/                                       && \
