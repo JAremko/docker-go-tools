@@ -12,27 +12,27 @@ RUN apk --update add git mercurial go godep              && \
     
     go get -u -fix                                          \
     
-      godoc.org/golang.org/x/tools/cmd/benchcmp             \
-      godoc.org/golang.org/x/tools/cmd/bundle               \
-      godoc.org/golang.org/x/tools/cmd/callgraph            \
-      godoc.org/golang.org/x/tools/cmd/cover                \
-      godoc.org/golang.org/x/tools/cmd/digraph              \
-      godoc.org/golang.org/x/tools/cmd/eg                   \
-      godoc.org/golang.org/x/tools/cmd/fiximports           \
-      godoc.org/golang.org/x/tools/cmd/godex                \
-      godoc.org/golang.org/x/tools/cmd/godoc                \
-      godoc.org/golang.org/x/tools/cmd/goimports            \
-      godoc.org/golang.org/x/tools/cmd/gomvpkg              \
-      godoc.org/golang.org/x/tools/cmd/gorename             \
-      godoc.org/golang.org/x/tools/cmd/gotype               \
-      godoc.org/golang.org/x/tools/cmd/html2article         \
-      godoc.org/golang.org/x/tools/cmd/oracle               \
-      godoc.org/golang.org/x/tools/cmd/present              \
-      godoc.org/golang.org/x/tools/cmd/ssadump              \
-      godoc.org/golang.org/x/tools/cmd/stress               \
-      godoc.org/golang.org/x/tools/cmd/stringer             \
-      godoc.org/golang.org/x/tools/cmd/tip                  \
-      godoc.org/golang.org/x/tools/cmd/vet                  \
+      golang.org/x/tools/cmd/benchcmp                       \
+      golang.org/x/tools/cmd/bundle                         \
+      golang.org/x/tools/cmd/callgraph                      \
+      golang.org/x/tools/cmd/cover                          \
+      golang.org/x/tools/cmd/digraph                        \
+      golang.org/x/tools/cmd/eg                             \
+      golang.org/x/tools/cmd/fiximports                     \
+      golang.org/x/tools/cmd/godex                          \
+      golang.org/x/tools/cmd/godoc                          \
+      golang.org/x/tools/cmd/goimports                      \
+      golang.org/x/tools/cmd/gomvpkg                        \
+      golang.org/x/tools/cmd/gorename                       \
+      golang.org/x/tools/cmd/gotype                         \
+      golang.org/x/tools/cmd/html2article                   \
+      golang.org/x/tools/cmd/oracle                         \
+      golang.org/x/tools/cmd/present                        \
+      golang.org/x/tools/cmd/ssadump                        \
+      golang.org/x/tools/cmd/stress                         \
+      golang.org/x/tools/cmd/stringer                       \
+      golang.org/x/tools/cmd/tip                            \
+      golang.org/x/tools/cmd/vet                            \
       
       golang.org/x/tools/refactor/eg                        \
       golang.org/x/tools/refactor/importgraph               \
