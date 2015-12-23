@@ -8,7 +8,7 @@
   3. [benchcmp](https://golang.org/x/tools/cmd/benchcmp)   
   4. [bundle](https://golang.org/x/tools/cmd/bundle)   
   5. [callgraph](https://golang.org/x/tools/cmd/callgraph)   
-  6. [digraph](golang.org/x/tools/cmd/digraph)   
+  6. [digraph](https://golang.org/x/tools/cmd/digraph)   
   7. [cmd/eg](https://golang.org/x/tools/cmd/eg)   
   8. [fiximports](https://golang.org/x/tools/cmd/fiximports)   
   9. [godex](https://golang.org/x/tools/cmd/godex)   
@@ -32,7 +32,7 @@
   27. [godo](https://github.com/go-godo/godo) 
   28. [gocode](https://github.com/nsf/gocode) 
   29. [errcheck](https://github.com/kisielk/errcheck) 
-  30. [golint](https://github.com/golang/lint/golint)   
+  30. [lint](https://github.com/golang/lint)   
   
 #### **How to use:**
   - **If you want to run a tool. For example gofmt:**
