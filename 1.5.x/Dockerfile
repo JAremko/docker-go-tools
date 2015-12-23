@@ -7,33 +7,49 @@ ENV GOROOT /usr/lib/go
 ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
-RUN apk --update add git mercurial                      && \
-    apk --update add git mercurial go godep                \
-      --update-cache --repository                          \
-      http://dl-3.alpinelinux.org/alpine/edge/community    \
-      --allow-untrusted                                 && \
-    mkdir -p /home/developer/workspace                  && \
-    go get -u golang.org/x/tools/cmd/benchcmp           && \
-    go get -u golang.org/x/tools/cmd/callgraph          && \
-    go get -u golang.org/x/tools/cmd/digraph            && \
-    go get -u golang.org/x/tools/cmd/eg                 && \
-    go get -u golang.org/x/tools/cmd/fiximports         && \
-    go get -u golang.org/x/tools/cmd/godex              && \
-    go get -u golang.org/x/tools/cmd/godoc              && \
-    go get -u github.com/nsf/gocode                     && \
-    go get -u golang.org/x/tools/cmd/gomvpkg            && \
-    go get -u golang.org/x/tools/cmd/gorename           && \
-    go get -u golang.org/x/tools/cmd/html2article       && \
-    go get -u github.com/kisielk/errcheck               && \
-    go get -u golang.org/x/tools/cmd/oracle             && \
-    go get -u golang.org/x/tools/cmd/ssadump            && \
-    go get -u golang.org/x/tools/cmd/stringer           && \
-    go get -u golang.org/x/tools/cmd/vet                && \
-    go get -u golang.org/x/tools/cmd/vet/whitelist      && \
-    go get -u code.google.com/p/rog-go/exp/cmd/godef    && \
-    go get -u github.com/golang/lint/golint             && \
-    go get -u github.com/jstemmer/gotags                && \
-    mv /usr/bin/godep $GOBIN/                           && \
-    apk del git mercurial                               && \
-    find / -name ".git" -prune -exec rm -rf "{}" \;     && \
+RUN apk --update add git mercurial                       && \
+    apk --update add git mercurial go godep                 \
+      --update-cache --repository                           \
+      http://dl-3.alpinelinux.org/alpine/edge/community     \
+      --allow-untrusted                                  && \
+    mkdir -p /home/developer/workspace/bin               && \
+    
+    go get -u -fix                                          \
+    
+      golang.org/x/tools/cmd/benchcmp                       \
+      golang.org/x/tools/cmd/bundle                         \
+      golang.org/x/tools/cmd/callgraph                      \
+      golang.org/x/tools/cmd/cover                          \
+      golang.org/x/tools/cmd/digraph                        \
+      golang.org/x/tools/cmd/eg                             \
+      golang.org/x/tools/cmd/fiximports                     \
+      golang.org/x/tools/cmd/godex                          \
+      golang.org/x/tools/cmd/godoc                          \
+      golang.org/x/tools/cmd/goimports                      \
+      golang.org/x/tools/cmd/gomvpkg                        \
+      golang.org/x/tools/cmd/gorename                       \
+      golang.org/x/tools/cmd/gotype                         \
+      golang.org/x/tools/cmd/html2article                   \
+      golang.org/x/tools/cmd/oracle                         \
+      golang.org/x/tools/cmd/present                        \
+      golang.org/x/tools/cmd/ssadump                        \
+      golang.org/x/tools/cmd/stress                         \
+      golang.org/x/tools/cmd/stringer                       \
+      golang.org/x/tools/cmd/tip                            \
+      golang.org/x/tools/cmd/vet                            \
+      
+      golang.org/x/tools/refactor/eg                        \
+      golang.org/x/tools/refactor/importgraph               \
+      golang.org/x/tools/refactor/rename                    \
+      golang.org/x/tools/refactor/satisfy                   \
+      
+      github.com/go-godo/godo                               \
+      github.com/nsf/gocode                                 \
+      github.com/kisielk/errcheck                           \
+      github.com/golang/lint/golint                         \
+      github.com/jstemmer/gotags                         && \
+      
+    mv /usr/bin/godep $GOBIN/                            && \
+    apk del git mercurial                                && \
+    find / -name ".git" -prune -exec rm -rf "{}" \;      && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
