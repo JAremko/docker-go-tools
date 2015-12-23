@@ -33,7 +33,7 @@ RUN apk --update add git mercurial go godep                         && \
       github.com/golang/tools/tree/master/cmd/vet                      \
       github.com/golang/tools/tree/master/refactor/importgraph         \
       github.com/golang/tools/tree/master/refactor/rename              \
-      github.com/golang/tools/tree/master/refactor/satisfy             \
+      golang.org/x/tools/refactor/satisfy                              \
       github.com/go-godo/godo                                          \
       github.com/nsf/gocode                                            \
       github.com/kisielk/errcheck                                      \
