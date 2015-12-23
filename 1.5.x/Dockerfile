@@ -14,7 +14,7 @@ RUN apk --update add git mercurial                       && \
       --allow-untrusted                                  && \
     mkdir -p /home/developer/workspace/bin               && \
     
-    go get -u -fix                                          \
+    go get -u                                               \
     
       golang.org/x/tools/cmd/benchcmp                       \
       golang.org/x/tools/cmd/bundle                         \
