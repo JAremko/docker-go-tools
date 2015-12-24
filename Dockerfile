@@ -38,6 +38,7 @@ RUN apk --update add git mercurial go godep              && \
       golang.org/x/tools/refactor/importgraph               \
       golang.org/x/tools/refactor/rename                    \
       golang.org/x/tools/refactor/satisfy                   \
+      github.com/rogpeppe/godef                             \
       
       github.com/go-godo/godo                               \
       github.com/nsf/gocode                                 \
