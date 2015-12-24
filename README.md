@@ -34,6 +34,7 @@
   29. [errcheck](https://github.com/kisielk/errcheck) 
   30. [lint](https://github.com/golang/lint)  
   31. [gotags](https://github.com/jstemmer/gotags)
+  32. [godef](github.com/rogpeppe/godef)
   
 #### **How to use:**
   - **If you want to run a tool. For example gofmt:**
