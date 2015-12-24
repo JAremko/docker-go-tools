@@ -37,6 +37,7 @@ RUN apk --update add git mercurial                       && \
       golang.org/x/tools/cmd/stringer                       \
       golang.org/x/tools/cmd/tip                            \
       golang.org/x/tools/cmd/vet                            \
+      github.com/rogpeppe/godef                             \
       
       golang.org/x/tools/refactor/eg                        \
       golang.org/x/tools/refactor/importgraph               \
