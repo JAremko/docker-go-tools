@@ -8,13 +8,13 @@ ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
 RUN apk --update add git mercurial                       && \
-    apk --update add git mercurial go godep                 \
+    apk --update add git mercurial go                       \
       --update-cache --repository                           \
       http://dl-3.alpinelinux.org/alpine/edge/community     \
       --allow-untrusted                                  && \
     mkdir -p /home/developer/workspace/bin               && \
     
-    go get -u                                               \
+    go get -u -buildmode=exe -ldflags '-s -w'               \
     
       golang.org/x/tools/cmd/benchcmp                       \
       golang.org/x/tools/cmd/bundle                         \
@@ -37,20 +37,23 @@ RUN apk --update add git mercurial                       && \
       golang.org/x/tools/cmd/stringer                       \
       golang.org/x/tools/cmd/tip                            \
       golang.org/x/tools/cmd/vet                            \
-      github.com/rogpeppe/godef                             \
-      
       golang.org/x/tools/refactor/eg                        \
       golang.org/x/tools/refactor/importgraph               \
       golang.org/x/tools/refactor/rename                    \
       golang.org/x/tools/refactor/satisfy                   \
-      
-      github.com/go-godo/godo                               \
+
+      github.com/rogpeppe/godef                             \
+      github.com/tools/godep                                \
       github.com/nsf/gocode                                 \
       github.com/kisielk/errcheck                           \
+      github.com/golang/lint/golint                         \
       github.com/jstemmer/gotags                            \
-      github.com/golang/lint/golint                      && \
+      github.com/dougm/goflymake                            \
+      github.com/golang/mock/mockgen                        \
+      github.com/alecthomas/gometalinter                 && \
+
+    gometalinter --install --update                      && \
       
-    mv /usr/bin/godep $GOBIN/                            && \
     apk del git mercurial                                && \
     find / -name ".git" -prune -exec rm -rf "{}" \;      && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
