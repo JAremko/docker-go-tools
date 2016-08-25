@@ -10,7 +10,7 @@ ENV PATH $PATH:$GOBIN:$GOPATH/bin
 RUN apk --update add git mercurial gcc                   && \
     apk --update add go                                     \
       --update-cache --repository                           \
-      http://dl-3.alpinelinux.org/alpine/edge/community     \
+      http://dl-3.alpinelinux.org/alpine/edge/community  && \
     mkdir -p /home/developer/workspace/bin               && \
     
     go get -u -buildmode=exe -ldflags '-s -w'               \
