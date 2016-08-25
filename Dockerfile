@@ -7,11 +7,10 @@ ENV GOROOT /usr/lib/go
 ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
-RUN apk --update add git mercurial                       && \
-    apk --update add git mercurial go                       \
+RUN apk --update add git mercurial gcc                   && \
+    apk --update add go                                     \
       --update-cache --repository                           \
       http://dl-3.alpinelinux.org/alpine/edge/community     \
-      --allow-untrusted                                  && \
     mkdir -p /home/developer/workspace/bin               && \
     
     go get -u -buildmode=exe -ldflags '-s -w'               \
