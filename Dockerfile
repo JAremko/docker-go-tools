@@ -8,7 +8,7 @@ ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
 RUN apk --update add git mercurial gcc                   && \
-    apk --update add go                                     \
+    apk --update add 'go<1.7'                               \
       --update-cache --repository                           \
       http://dl-3.alpinelinux.org/alpine/edge/community  && \
     mkdir -p /home/developer/workspace/bin               && \
