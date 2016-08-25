@@ -52,6 +52,6 @@ RUN apk --update add git mercurial gcc                   && \
 
     gometalinter --install --update                      && \
       
-    apk del git mercurial                                && \
+    apk del git mercurial gcc                            && \
     find / -name ".git" -prune -exec rm -rf "{}" \;      && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
