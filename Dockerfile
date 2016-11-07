@@ -7,9 +7,8 @@ ENV GOROOT /usr/lib/go
 ENV GOBIN $GOROOT/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin
 
-RUN apk --update add git mercurial gcc                   && \
-    apk --update add 'go<1.7'                               \
-      --update-cache --repository                           \
+RUN apk --update add git mercurial gcc g++               && \
+    apk --update add go --update-cache --repository         \
       http://dl-3.alpinelinux.org/alpine/edge/community  && \
     mkdir -p /home/developer/workspace/bin               && \
     
@@ -29,7 +28,7 @@ RUN apk --update add git mercurial gcc                   && \
       golang.org/x/tools/cmd/gorename                       \
       golang.org/x/tools/cmd/gotype                         \
       golang.org/x/tools/cmd/html2article                   \
-      golang.org/x/tools/cmd/oracle                         \
+       golang.org/x/tools/cmd/guru                          \
       golang.org/x/tools/cmd/present                        \
       golang.org/x/tools/cmd/ssadump                        \
       golang.org/x/tools/cmd/stress                         \
@@ -55,3 +54,5 @@ RUN apk --update add git mercurial gcc                   && \
     apk del git mercurial gcc                            && \
     find / -name ".git" -prune -exec rm -rf "{}" \;      && \
     rm -rf /var/cache/apk/* /home/developer/workspace/*
+
+WORKDIR /home/developer/workspace/
